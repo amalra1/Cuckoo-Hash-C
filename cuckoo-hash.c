@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
-
-#define M 11;
+#define M 11
 
 int h1(int k)
 {
@@ -11,7 +11,7 @@ int h1(int k)
 
 int h2(int k)
 {
-    return M * (k * 0.9 - k * 0.9);
+    return floor(M * (k * 0.9 - floor(k * 0.9)));
 }
 
 int inserir_hash_aberto(int T1[11], int T2[11], int k)
@@ -43,6 +43,8 @@ int main()
 {
     int T1[11];
     int T2[11];
+    // int* T1 = malloc(sizeof(int) * M);
+    //int* T2 = malloc(sizeof(int) * M);
 
     int i, j;
 
@@ -53,9 +55,17 @@ int main()
         T2[i] = 0;
 
     inserir_hash_aberto(T1, T2, 10);
+    inserir_hash_aberto(T1, T2, 22);
+    inserir_hash_aberto(T1, T2, 4);
+    inserir_hash_aberto(T1, T2, 15);
+    inserir_hash_aberto(T1, T2, 59);
+
+    printf("T1\n");
 
     for (i = 0; i < 11; i++)
         printf("T1[%d] -> %d\n", i, T1[i]);
+
+    printf("\nT2\n");
 
     for (i = 0; i < 11; i++)
         printf("T2[%d] -> %d\n", i, T2[i]);
