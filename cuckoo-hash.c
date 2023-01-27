@@ -112,11 +112,13 @@ int remove_hash(Cuckoo_Hash_t* T, int chave)
     if (!busca(T, chave, v))
         return -1;
 
+    // Caso tenha encontrado na T1
     if (v[0] == 1)
     {
         T->T1[v[1]].estado = DELETADO;
         return 1;
     }
+    // caso encontrado na T2
     else
     {
         T->T2[v[1]].estado = DELETADO;
@@ -131,10 +133,7 @@ int inserir_hash_aberto(Cuckoo_Hash_t* T, int k)
 
     // funcao de busca pra verificar se existe em alguma T
     if (busca(T, k, v))
-    {
-        printf("achou no na tabela T%d, indice: %d\n", v[0], v[1]);
         return -1; 
-    }
 
     indexT1 = h1(k);
         
@@ -171,23 +170,6 @@ int main()
     inserir_hash_aberto(T, 2);
     remove_hash(T, 1);
     remove_hash(T, 2);
-    // inserir_hash_aberto(T, 2);
-    // inserir_hash_aberto(T, 11);
-    // inserir_hash_aberto(T, 12);
-    // inserir_hash_aberto(T, 13);
-    // remove_hash(T, 0);
-    // remove_hash(T, 1);
-    // remove_hash(T, 2);
-    // inserir_hash_aberto(T, 22);
-    // remove_hash(T, 11);
-    //inserir_hash_aberto(T, 15);
-    // //inserir_hash_aberto(T, 59);
-    // remove_hash(T, 8);
-    // inserir_hash_aberto(T, 19);
-    // //remove_hash(T, 22);
-    // remove_hash(T, 2);
-    // inserir_hash_aberto(T, 24);
-
 
     printf("T1\n");
 
