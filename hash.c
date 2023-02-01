@@ -107,7 +107,6 @@ int inserir_hash_aberto(Cuckoo_Hash_t* T, int k){
     if (busca(T, k, v))
         return -1; 
    
-
     indexT1 = h1(k);
         
     // Se for vazio o slot, apenas insere

@@ -2,7 +2,7 @@
     Essa biblioteca implementa o algoritmo Cuckoo Hash
     Desenvolvido por:
         Davi Garcia Lazzarin
-        
+        Pedro Amaral Chapelin        
     Data: 29/01/2023
 */
 #ifndef LIB_HASH
