@@ -3,6 +3,13 @@
 //#include <math.h>
 #include "hash.h"
 
+/*
+    Desenvolvido por:
+        Davi Garcia Lazzarin
+        Pedro Amaral Chapelin        
+    Data: 29/01/2023
+*/
+
 int h1(int k){
     return k % M;
 }

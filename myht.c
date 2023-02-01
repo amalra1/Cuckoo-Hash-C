@@ -2,6 +2,13 @@
 #include<stdlib.h>
 #include "hash.h"
 
+/*
+    Desenvolvido por:
+        Davi Garcia Lazzarin
+        Pedro Amaral Chapelin        
+    Data: 29/01/2023
+*/
+
 #define TAM_LINHA 10
 
 int main(){
